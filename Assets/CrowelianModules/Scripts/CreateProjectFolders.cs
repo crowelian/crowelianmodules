@@ -23,6 +23,9 @@ public class CreateProjectFolders : MonoBehaviour
 
         guid = AssetDatabase.CreateFolder("Assets", "Audio");
         newFolderPath = AssetDatabase.GUIDToAssetPath(guid);
+
+        guid = AssetDatabase.CreateFolder("Assets", "Fonts");
+        newFolderPath = AssetDatabase.GUIDToAssetPath(guid);
     }
 
    
