@@ -1,4 +1,4 @@
-# crowelianmodules
+# CrowelianModules
 a script repository for myself to reuse code.
 
 
