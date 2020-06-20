@@ -13,6 +13,20 @@ public class CreateProjectFolders : MonoBehaviour
         string newFolderPath = "";
         string createdFolders = "";
 
+        if (!AssetDatabase.IsValidFolder("Assets/Anims"))
+        {
+            guid = AssetDatabase.CreateFolder("Assets", "Anims");
+            newFolderPath = AssetDatabase.GUIDToAssetPath(guid);
+            createdFolders += "Anims, ";
+        }
+
+        if (!AssetDatabase.IsValidFolder("Assets/Audio"))
+        {
+            guid = AssetDatabase.CreateFolder("Assets", "Audio");
+            newFolderPath = AssetDatabase.GUIDToAssetPath(guid);
+            createdFolders += "Audio, ";
+        }
+
         if (!AssetDatabase.IsValidFolder("Assets/Scripts"))
         {
             guid = AssetDatabase.CreateFolder("Assets", "Scripts");
@@ -26,14 +40,7 @@ public class CreateProjectFolders : MonoBehaviour
             newFolderPath = AssetDatabase.GUIDToAssetPath(guid);
             createdFolders += "Textures, ";
         }
-
-        if (!AssetDatabase.IsValidFolder("Assets/Anims"))
-        {
-            guid = AssetDatabase.CreateFolder("Assets", "Anims");
-            newFolderPath = AssetDatabase.GUIDToAssetPath(guid);
-            createdFolders += "Anims, ";
-        }
-
+        
         if (!AssetDatabase.IsValidFolder("Assets/Models"))
         {
             guid = AssetDatabase.CreateFolder("Assets", "Models");
@@ -41,20 +48,19 @@ public class CreateProjectFolders : MonoBehaviour
             createdFolders += "Models, ";
         }
 
-        if (!AssetDatabase.IsValidFolder("Assets/Audio"))
+        if (!AssetDatabase.IsValidFolder("Assets/Prefabs"))
         {
-            guid = AssetDatabase.CreateFolder("Assets", "Audio");
+            guid = AssetDatabase.CreateFolder("Assets", "Prefabs");
             newFolderPath = AssetDatabase.GUIDToAssetPath(guid);
-            createdFolders += "Audio, ";
+            createdFolders += "Prefabs, ";
         }
-
+        
         if (!AssetDatabase.IsValidFolder("Assets/Fonts"))
         {
             guid = AssetDatabase.CreateFolder("Assets", "Fonts");
             newFolderPath = AssetDatabase.GUIDToAssetPath(guid);
             createdFolders += "Fonts, ";
         }
-        
         
 
         if (guid == "")
