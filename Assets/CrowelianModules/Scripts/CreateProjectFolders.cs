@@ -27,18 +27,18 @@ public class CreateProjectFolders : MonoBehaviour
             createdFolders += "Audio, ";
         }
 
-        if (!AssetDatabase.IsValidFolder("Assets/Scripts"))
+        if (!AssetDatabase.IsValidFolder("Assets/Fonts"))
         {
-            guid = AssetDatabase.CreateFolder("Assets", "Scripts");
+            guid = AssetDatabase.CreateFolder("Assets", "Fonts");
             newFolderPath = AssetDatabase.GUIDToAssetPath(guid);
-            createdFolders += "Scripts, ";
+            createdFolders += "Fonts, ";
         }
 
-        if (!AssetDatabase.IsValidFolder("Assets/Textures"))
+        if (!AssetDatabase.IsValidFolder("Assets/Materials"))
         {
-            guid = AssetDatabase.CreateFolder("Assets", "Textures");
+            guid = AssetDatabase.CreateFolder("Assets", "Materials");
             newFolderPath = AssetDatabase.GUIDToAssetPath(guid);
-            createdFolders += "Textures, ";
+            createdFolders += "Materials, ";
         }
         
         if (!AssetDatabase.IsValidFolder("Assets/Models"))
@@ -55,13 +55,20 @@ public class CreateProjectFolders : MonoBehaviour
             createdFolders += "Prefabs, ";
         }
         
-        if (!AssetDatabase.IsValidFolder("Assets/Fonts"))
+        if (!AssetDatabase.IsValidFolder("Assets/Scripts"))
         {
-            guid = AssetDatabase.CreateFolder("Assets", "Fonts");
+            guid = AssetDatabase.CreateFolder("Assets", "Scripts");
             newFolderPath = AssetDatabase.GUIDToAssetPath(guid);
-            createdFolders += "Fonts, ";
+            createdFolders += "Scripts, ";
         }
         
+        if (!AssetDatabase.IsValidFolder("Assets/Textures"))
+        {
+            guid = AssetDatabase.CreateFolder("Assets", "Textures");
+            newFolderPath = AssetDatabase.GUIDToAssetPath(guid);
+            createdFolders += "Textures, ";
+        }
+
 
         if (guid == "")
         {
