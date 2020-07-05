@@ -61,6 +61,13 @@ public class CreateProjectFolders : MonoBehaviour
             newFolderPath = AssetDatabase.GUIDToAssetPath(guid);
             createdFolders += "Scripts, ";
         }
+
+        if (!AssetDatabase.IsValidFolder("Assets/Shaders"))
+        {
+            guid = AssetDatabase.CreateFolder("Assets", "Shaders");
+            newFolderPath = AssetDatabase.GUIDToAssetPath(guid);
+            createdFolders += "Shaders, ";
+        }
         
         if (!AssetDatabase.IsValidFolder("Assets/Textures"))
         {
